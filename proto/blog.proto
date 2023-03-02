@@ -1,0 +1,58 @@
+syntax = "proto3";
+
+package blog;
+
+option go_package = "./pb";
+
+service BlogService {
+    rpc CreateMethod(CreateRequest) returns (CreateResponse){};
+    rpc LoginMethod(LoginRequest) returns (LoginResponse){};
+    rpc ListBlogs(ListBlogsRequest) returns (ListBlogsResponse){};
+    rpc DeleteBlog(DeleteBlogRequest) returns (DeleteBlogResponse){};
+    rpc ReadDetails(DetailesRequest) returns (DetailesResponse){};
+}
+
+message CreateRequest {
+    string title = 1;
+    string detail = 2;
+}
+
+message CreateResponse {}
+
+message LoginRequest {
+    string name = 1;
+    string pwd = 2;
+}
+
+message LoginResponse {
+    string loginMessage = 1;
+}
+
+
+message ListBlogsRequest {
+}
+
+message Blog {
+  int64 id = 1;
+  string title = 2;
+}
+
+message ListBlogsResponse {
+  repeated Blog blogs = 1;
+}
+
+message DeleteBlogRequest{
+  int64 id = 1;
+  string title = 2;
+}
+
+message DeleteBlogResponse{}
+
+message DetailesRequest {
+  int64 id = 1;
+}
+
+message DetailesResponse {
+  string title = 1;
+  string details = 2;
+}

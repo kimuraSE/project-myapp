@@ -1,0 +1,120 @@
+.video_box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    filter: brightness(0.3);
+}
+
+.article_box {
+    padding-bottom: 300px;
+}
+
+
+.section_box {
+    margin-top: 100px;
+    
+
+    section {
+
+        .twitter_box {
+            text-align: center;
+
+
+            img {
+                margin: 0 auto;
+                width: 50px;
+                height: 50px;
+            }
+
+            a {
+
+                display: inline-block;
+                color: white;
+                font-family: 'Nanum Gothic', sans-serif;
+                font-size: 1.8rem;
+                margin-top: 50px;
+            }
+
+            span {
+                display: block;
+                color: white;
+                font-family: 'Nanum Gothic', sans-serif;
+                font-size: 1.2rem;
+                margin-top: 40px;
+                line-height: 50px;
+
+            }
+        }
+
+        .form_box {
+            text-align: center;
+
+            &>div {
+                color: white;
+                font-family: 'Nanum Gothic', sans-serif;
+                font-size: 2.5rem;
+                display: block;
+                margin-bottom: 100px;
+
+            }
+
+            form {
+
+                color: white;
+                font-family: 'Noto Serif JP', sans-serif;
+                font-size: 1.4rem;
+                display: inline-block;
+
+
+                dl {
+                    margin: 80px 0;
+                    display: flex;
+
+
+
+                    dt {
+                        width: 200px;
+                        margin-right: 200px;
+                        position: relative;
+
+
+                        button {
+                            
+                            background-color: rgba(81, 81, 81,0.5);
+                            color: rgb(255, 255, 255);
+                            border: none;
+                            padding: 15px 20px;
+                            border-radius: 20%;
+                            cursor: pointer;
+                        }
+
+                    }
+
+                    dd {
+                        input{
+                            border: none;
+                            outline: none 
+                        }
+
+                        textarea {
+                            width: 400px;
+                            height: 200px;
+                        }
+
+
+                    }
+
+                }
+
+
+
+            }
+        }
+
+
+
+    }
+}

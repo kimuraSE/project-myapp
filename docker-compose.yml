@@ -1,0 +1,40 @@
+version: '3'
+
+services:
+
+  server:
+    build: 
+      context: ./server
+    ports:
+      - "50051:50051"
+    links:
+      - "mariadb"
+
+  client:
+    build: 
+      context: ./client
+    ports:
+      - "3000:3000"
+    tty: true
+    volumes:
+      - ./client:/app
+    links:
+      - "envoy"
+       
+  envoy:
+    build:
+      context: ./proxy
+    ports:
+      - "9000:9000"
+    links:
+      - "server"
+  
+  mariadb:
+    build: 
+      context: ./mariadb
+    volumes:
+      - ./mariadb/data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    
+    

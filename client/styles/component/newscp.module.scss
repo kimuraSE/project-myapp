@@ -1,0 +1,21 @@
+
+.news_box{
+
+    a{
+        text-decoration: none;
+        
+        
+        & > div{
+            border-bottom: 1px solid white;
+            margin-bottom: 100px;
+            
+            
+        .news_title{
+            color: white;
+            font-size: 2rem;
+            padding-bottom: 10px;
+            font-family: 'Nanum Gothic', sans-serif;;
+        }
+    }
+}
+}

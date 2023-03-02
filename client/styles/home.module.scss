@@ -1,0 +1,103 @@
+
+.video_box{
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    filter: brightness(0.7);
+    
+}
+
+
+
+.eyecatchtext_box{
+
+    position: absolute;
+    top: 25%;
+
+    h1{
+        color: white;
+        font-family: 'Noto Serif JP', sans-serif;
+        font-weight: 100;
+        font-size: 6rem;
+        letter-spacing: 10px;
+    }
+    h3{
+        color: white;
+        font-family: 'Noto Serif JP', sans-serif;
+        font-weight: 100;
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+
+    }
+
+    h2{
+        color: white;
+        font-family: 'Noto Serif JP', sans-serif;
+        font-weight: 100;
+        font-size: 2rem;
+        letter-spacing: 5px;
+        margin-top: 175px;
+    }
+}
+
+.header_box{
+
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    bottom: 5%;
+    
+
+    header{
+
+        nav{
+
+            ul{
+                padding-inline-start: 0px;
+
+                    li{
+                        position: relative;
+                        margin: 15px 0;
+                        list-style: none;
+
+
+                        a{
+                            position: relative;
+                            display: inline-block;
+                            font-family: 'Nanum Gothic', sans-serif;
+                            font-size: 3.5rem;
+                            letter-spacing: 5px;
+                            color: white;
+                            text-decoration: none;
+                            overflow: hidden;
+                            
+                            &::after{
+                                content: '';
+                                position: absolute;
+                                display: inline-block;
+                                width: 100%;
+                                height: 1px;
+                                bottom: 0;
+                                left: 0;
+                                background-color: white;
+                                transform: translateX(-100%);
+                                transition: all 0.5s;
+                            }
+
+                            &:hover::after{
+                                transform: translateX(0);
+                            }
+                        }
+
+                        
+                    }
+            
+            
+        }
+    }
+}
+}
