@@ -1,7 +1,12 @@
+import Head from "next/head";
 import { VideoHTMLAttributes } from "react";
 import MenuCp from "./cp/_menu";
 import PageTitleCp from "./cp/_pageTitle";
 import styles from "/styles/skills.module.scss"
+import img1 from  "../public/img/about/Service.png"
+import img2 from  "../public/img/skills/micro-img.jpg"
+import img3 from  "../public/img/skills/HTML.png"
+import Image from "next/image";
 
 
 const videoProps = {
@@ -15,6 +20,12 @@ const skillsPage = () => {
 
     return (
         <>
+        <Head>
+        <title>Kimura Ryotaのportfolio | skills</title>
+        <meta name="description" content="kimura ryotaのportfolioのskills項目です" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        </Head>
+        
             <div className="global_container">
 
                 <div className={styles.video_box}>
@@ -51,7 +62,6 @@ const skillsPage = () => {
                                                 フレームワーク : Next.js<p></p>
                                                 インフラ技術 : AWS,Docker,マイクロサービス開発<p></p>
                                                 ソフトウェア : AdobeXD.Photoshop,Illustrator<p></p>
-                                                　<p></p>
                                                 フロントエンドではNext.jsを使用してWebサイトのSPA(シングルページアプリケーション)化をし、<p></p>
                                                 Googleでの検索順位を上位にするSEO対策を施しています。<p></p>
                                                 他にも、利用者視点を重視し使用性に着目しながらHP制作を行っております。<p></p>
@@ -61,6 +71,8 @@ const skillsPage = () => {
                                             </span>
 
                                         </div>
+
+                                        <Image src={img1} alt="kimura ryotaのアプリケーションのアーキテクチャ画像"/>
                                     </section>
                                 </div>
 
@@ -80,6 +92,8 @@ const skillsPage = () => {
                                             </span>
 
                                         </div>
+
+                                        <Image src={img2} alt="マイクロサービスを表す画像" />
                                     </section>
                                 </div>
 
@@ -93,13 +107,14 @@ const skillsPage = () => {
 
                                             <span>
                                                 ホームページ制作ではクライアント様からの要望に応えるだけでなく、<p></p>
-                                                ユーザーの目を引き、使用性に不憫がない満足していただけるようなホームページを<p></p
-                                                >作成するため、心の中に眠っている要望をも引き出し、ご提案させて頂きます。<p></p>
+                                                ユーザーの目を引き、使用性に不憫がない満足していただけるようなホームページを作成するため、心の中に眠っている要望をも引き出し、ご提案させて頂きます。<p></p>
                                                 最高の品質と感動をお届けするようなホームページを作り上げられるよう全力を尽くします。
 
                                             </span>
 
                                         </div>
+
+                                        <Image src={img3} alt="ホームページを作成するHTMLの画像"/>
                                     </section>
                                 </div>
 

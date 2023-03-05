@@ -3,6 +3,7 @@ import { ChangeEvent, MouseEvent, useState } from "react"
 import { BlogServiceClient } from "../../../pb/BlogServiceClientPb"
 import { LoginRequest } from "../../../pb/blog_pb"
 import {setCookie} from "nookies"
+import Head from "next/head"
 
 const client = new BlogServiceClient("http://localhost:9000",null,null) 
 
@@ -54,6 +55,13 @@ const Login = ()=>{
     }
 
     return(
+        <>
+        <Head>
+        <title>管理者ページ</title>
+        <meta name="description" content="管理者ページ" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="noindex" />
+        </Head>
         <div>
         <label htmlFor="name">名前：</label>
         <input type="text" id="name" value={inputName} onChange={onChangeName}/>
@@ -63,6 +71,7 @@ const Login = ()=>{
         <p></p>
         <button onClick={onClickLogin}>Login</button>
         </div>
+        </>
     )
 }
 export default Login

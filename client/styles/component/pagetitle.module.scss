@@ -1,9 +1,42 @@
-.title_text{
+@media screen and (max-width:767px) {
+    .title_text{
 
-    span{   
-        color: white;
-        font-family: 'Nanum Gothic', sans-serif;
-        font-size: 7rem;
-        font-weight:100;
+        span{   
+            color: white;
+            font-family: 'Nanum Gothic', sans-serif;
+            font-size: 4rem;
+            font-weight:100;
+        }
     }
+
 }
+
+@media screen and (min-width:768px) and (max-width:1023px){
+
+    .title_text{
+
+        span{   
+            color: white;
+            font-family: 'Nanum Gothic', sans-serif;
+            font-size: 5.5rem;
+            font-weight:100;
+        }
+    }
+
+}
+
+@media screen and (min-width:1024px) {
+
+    .title_text{
+
+        span{   
+            color: white;
+            font-family: 'Nanum Gothic', sans-serif;
+            font-size: 7rem;
+            font-weight:100;
+        }
+    }
+
+}
+
+

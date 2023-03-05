@@ -6,6 +6,7 @@ import MenuCp from "./../cp/_menu"
 import PageTitleCp from "./../cp/_pageTitle"
 import {BlogServiceClient} from "../../pb/BlogServiceClientPb"
 import {ListBlogsRequest,Blog} from "../../pb/blog_pb"
+import Head from "next/head"
 
 
 const videoProps = {
@@ -38,6 +39,11 @@ const NewsPage = () => {
 
     return (
         <>
+        <Head>
+        <title>Kimura Ryotaのportfolio | news</title>
+        <meta name="description" content="kimura ryotaのportfolioのnews項目です" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        </Head>
             <div className="global_container">
 
                 <div className={styles.video_box}>

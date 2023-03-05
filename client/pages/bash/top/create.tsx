@@ -7,6 +7,7 @@ import {BlogServiceClient} from "../../../pb/BlogServiceClientPb"
 import {CreateRequest} from "../../../pb/blog_pb"
 import { ChangeEvent, MouseEvent, useState } from "react"
 import { GetServerSideProps } from "next"
+import Head from "next/head"
 
 const client = new BlogServiceClient("http://localhost:9000",null,null)
 
@@ -51,6 +52,12 @@ const BashCreate = ({user_name,user_pwd}:Props) =>{
 
     return(
         <>
+        <Head>
+        <title>管理者ページ</title>
+        <meta name="description" content="管理者ページ" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="noindex" />
+        </Head>
         <div>
             <div>管理者</div>
             <div>名前:{user_name}</div>

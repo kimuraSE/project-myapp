@@ -1,4 +1,5 @@
 import { NextPage } from "next";
+import Head from "next/head";
 import Link from "next/link";
 import { VideoHTMLAttributes } from "react";
 
@@ -16,6 +17,14 @@ const videoProps = {
 const NotFound: NextPage = () => {
 
     return (
+        <>
+
+        <Head>
+        <title>Not Found</title>
+        <meta name="description" content="Not Foundページ" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        </Head>
+
         <div className="global_container">
 
             <div className={styles.video_box}>
@@ -53,6 +62,7 @@ const NotFound: NextPage = () => {
         </div>
 
 
+        </>
     )
 }
 

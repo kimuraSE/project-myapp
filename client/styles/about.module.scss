@@ -1,70 +1,239 @@
+@media screen and (max-width:767px) {
 
-
-.video_box{
-    position: fixed;
-    top: 0;
-    left: 0;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -1;
-    filter: brightness(0.3);
-}
-
-
-
-
-.article_box{
-    padding-bottom: 300px;
-}
-
-
-.section_box{
-    margin-top: 100px;
-
-    &:nth-of-type(2){
-        text-align: end;
-        margin-top: 400px;
+    .video_box{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: auto;
+        height: auto;
+        z-index: -1;
+        filter: brightness(0.3);
+        transform: scale(9);
     }
-
-    &:nth-of-type(3){
-        margin-top: 400px;
+    
+    
+    
+    
+    .article_box{
+        padding-bottom: 150px;
     }
-
-
-    section{
-
-        
-        .section_number{
-            
-            display: inline-block;
-            color: white;
-            font-family: 'Nanum Gothic', sans-serif;
-            border-right: 1px solid white;
-            padding-right: 10px;
-            font-size: 1.8rem;
-            
+    
+    
+    .section_box{
+        margin-top: 100px;
+    
+        &:nth-of-type(2){
+          
+            margin-top: 150px;
         }
-        
-        & > span{
-            display: inline-block;
-            color: white;
-            font-family: 'Nanum Gothic', sans-serif;
-            font-size: 2.5rem;
-            margin-left: 40px;
-            
+    
+        &:nth-of-type(3){
+            margin-top: 150px;
         }
-
-        .text_box{
-            margin-top: 40px;
-
-            span{
+    
+    
+        section{
+            img{
+                margin: 0 auto;
+                margin-top: 20px;
+                width: 100%;
+                height: auto;
+            }
+    
+            
+            .section_number{
+                
+                display: inline-block;
                 color: white;
-                font-family: 'Noto Serif JP', sans-serif;
-                font-size: 1.3rem;
-                font-weight: 100;
-                letter-spacing: 2px;
-                line-height: 40px;
+                font-family: 'Nanum Gothic', sans-serif;
+                border-right: 1px solid white;
+                padding-right: 10px;
+                font-size: 1.2rem;
+                
+            }
+            
+            & > span{
+                display: inline-block;
+                color: white;
+                font-family: 'Nanum Gothic', sans-serif;
+                font-size: 1.8rem;
+                margin-left: 20px;
+                
+            }
+    
+            .text_box{
+                margin-top: 40px;
+    
+                span{
+                    color: white;
+                    font-family: 'Noto Serif JP', sans-serif;
+                    font-size: 0.6rem;
+                    font-weight: 100;
+                    letter-spacing: 3px;
+                    line-height: 40px;
+                }
             }
         }
     }
 }
+
+
+@media screen and (min-width:768px) and (max-width:1024px) {
+    .video_box{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: auto;
+        height: auto;
+        z-index: -1;
+        filter: brightness(0.3);
+        transform: scale(9);
+    }
+    
+    
+    
+    
+    .article_box{
+        padding-bottom: 200px;
+    }
+    
+    
+    .section_box{
+        margin-top:50px;
+    
+        &:nth-of-type(2){
+          
+            margin-top: 200px;
+        }
+    
+        &:nth-of-type(3){
+            margin-top: 200px;
+        }
+    
+    
+        section{
+            img{
+                margin: 0 auto;
+                margin-top: 50px;
+                width: 100%;
+                height: auto;
+            }
+    
+            
+            .section_number{
+                
+                display: inline-block;
+                color: white;
+                font-family: 'Nanum Gothic', sans-serif;
+                border-right: 1px solid white;
+                padding-right: 10px;
+                font-size: 1.2rem;
+                
+            }
+            
+            & > span{
+                display: inline-block;
+                color: white;
+                font-family: 'Nanum Gothic', sans-serif;
+                font-size: 1.8rem;
+                margin-left: 20px;
+                
+            }
+    
+            .text_box{
+                margin-top: 40px;
+    
+                span{
+                    color: white;
+                    font-family: 'Noto Serif JP', sans-serif;
+                    font-size: 0.9rem;
+                    font-weight: 100;
+                    letter-spacing: 3px;
+                    line-height: 40px;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width:1025px) {
+
+    .video_box{
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
+        filter: brightness(0.3);
+    }
+    
+    
+    
+    
+    .article_box{
+        padding-bottom: 300px;
+    }
+    
+    
+    .section_box{
+        margin-top: 100px;
+    
+        &:nth-of-type(2){
+            text-align: end;
+            margin-top: 400px;
+        }
+    
+        &:nth-of-type(3){
+            margin-top: 400px;
+        }
+    
+    
+        section{
+
+            img{
+                margin: 0 auto;
+                margin-top: 100px;
+                width: 100%;
+                height: auto;
+            }
+    
+            
+            .section_number{
+                
+                display: inline-block;
+                color: white;
+                font-family: 'Nanum Gothic', sans-serif;
+                border-right: 1px solid white;
+                padding-right: 10px;
+                font-size: 1.8rem;
+                
+            }
+            
+            & > span{
+                display: inline-block;
+                color: white;
+                font-family: 'Nanum Gothic', sans-serif;
+                font-size: 2.5rem;
+                margin-left: 40px;
+                
+            }
+    
+            .text_box{
+                margin-top: 40px;
+    
+                span{
+                    color: white;
+                    font-family: 'Noto Serif JP', sans-serif;
+                    font-size: 1.3rem;
+                    font-weight: 100;
+                    letter-spacing: 2px;
+                    line-height: 40px;
+                }
+            }
+        }
+    }
+
+}
+

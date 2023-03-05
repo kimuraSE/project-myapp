@@ -8,6 +8,7 @@ import { useEffect, useState } from "react"
 import {BlogServiceClient} from "../../../pb/BlogServiceClientPb"
 import {Blog,ListBlogsRequest} from "../../../pb/blog_pb"
 import BlogList from "./_bloglist"
+import Head from "next/head"
 
 
 
@@ -56,6 +57,12 @@ const BashTop = ({user_name,user_pwd}:Props) =>{
 
     return(
         <>
+        <Head>
+        <title>管理者ページ</title>
+        <meta name="description" content="管理者ページ" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="noindex" />
+        </Head>
         <div>
             <div>管理者</div>
             <div>{user_name}</div>

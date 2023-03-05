@@ -1,31 +1,110 @@
-.video_box{
-    position: fixed;
-    top: 0;
-    left: 0;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -1;
-    filter: brightness(0.3);
-}
+@media screen and (max-width:767px){
 
-.article_box{
-    padding-bottom: 300px;
-}
-
-
-.section_box{
-    margin-top: 100px;
-    text-align: center;
-
-    .text_box{
-        color: white;
-        font-size: 1.5rem;
-        font-family: 'Nanum Gothic', sans-serif;
-        line-height: 50px;
-
-        a{
-            color: white;
-        }
+    .video_box{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: auto;
+        height: auto;
+        z-index: -1;
+        filter: brightness(0.3);
+        transform: scale(9);
     }
-        
+    
+    .article_box{
+        padding-bottom: 300px;
+    }
+    
+    
+    .section_box{
+        margin-top: 100px;
+        text-align: center;
+    
+        .text_box{
+            color: white;
+            font-size: 1rem;
+            font-family: 'Nanum Gothic', sans-serif;
+            line-height: 25px;
+    
+            a{
+                color: white;
+            }
+        }
+            
+    }
+
+}
+
+@media screen and (min-width:768px) and (max-width:1024px){
+
+    .video_box{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: auto;
+        height: auto;
+        z-index: -1;
+        filter: brightness(0.3);
+        transform: scale(9);
+    }
+    
+    .article_box{
+        padding-bottom: 300px;
+    }
+    
+    
+    .section_box{
+        margin-top: 100px;
+        text-align: center;
+    
+        .text_box{
+            color: white;
+            font-size: 1.5rem;
+            font-family: 'Nanum Gothic', sans-serif;
+            line-height: 40px;
+    
+            a{
+                color: white;
+            }
+        }
+            
+    }
+
+}
+
+@media screen and (min-width:1025px){
+
+    .video_box{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: auto;
+        height: auto;
+        z-index: -1;
+        filter: brightness(0.3);
+        transform: scale(9);
+    }
+    
+    .article_box{
+        padding-bottom: 300px;
+    }
+    
+    
+    .section_box{
+        margin-top: 100px;
+        text-align: center;
+    
+        .text_box{
+            color: white;
+            font-size: 1.5rem;
+            font-family: 'Nanum Gothic', sans-serif;
+            line-height: 50px;
+    
+            a{
+                color: white;
+            }
+        }
+            
+    }
+
 }

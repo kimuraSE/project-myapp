@@ -1,81 +1,86 @@
+@media screen and (max-width:767px) {
 
-.video_box{
+    .video_box {
 
-    position: fixed;
-    top: 0;
-    left: 0;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -1;
-    filter: brightness(0.7);
-    
-}
-
-
-
-.eyecatchtext_box{
-
-    position: absolute;
-    top: 25%;
-
-    h1{
-        color: white;
-        font-family: 'Noto Serif JP', sans-serif;
-        font-weight: 100;
-        font-size: 6rem;
-        letter-spacing: 10px;
-    }
-    h3{
-        color: white;
-        font-family: 'Noto Serif JP', sans-serif;
-        font-weight: 100;
-        font-size: 1.5rem;
-        letter-spacing: 2px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: auto;
+        height: auto;
+        z-index: -1;
+        filter: brightness(0.7);
+        transform: scale(9);
 
     }
 
-    h2{
-        color: white;
-        font-family: 'Noto Serif JP', sans-serif;
-        font-weight: 100;
-        font-size: 2rem;
-        letter-spacing: 5px;
-        margin-top: 175px;
+
+
+    .eyecatchtext_box {
+
+        position: absolute;
+        top: 10%;
+
+        h1 {
+            color: white;
+            font-family: 'Noto Serif JP', sans-serif;
+            font-weight: 100;
+            font-size: 2.2rem;
+            letter-spacing: 0px;
+            line-height: 200%;
+        }
+
+        h3 {
+            color: white;
+            font-family: 'Noto Serif JP', sans-serif;
+            font-weight: 100;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            margin-top: 5%;
+
+        }
+
+        h2 {
+            color: white;
+            font-family: 'Noto Serif JP', sans-serif;
+            font-weight: 100;
+            font-size: 0.8rem;
+            letter-spacing: 5px;
+            margin-top: 3%;
+        }
     }
-}
 
-.header_box{
+    .header_box {
 
-    position: absolute;
-    z-index: 1;
-    right: 0;
-    bottom: 5%;
-    
+        position: absolute;
+        z-index: 1;
+        right: 0;
+        bottom: 5%;
 
-    header{
 
-        nav{
+        header {
 
-            ul{
-                padding-inline-start: 0px;
+            nav {
 
-                    li{
+                ul {
+                    padding-inline-start: 0px;
+
+                    li {
                         position: relative;
                         margin: 15px 0;
                         list-style: none;
 
 
-                        a{
+                        a {
                             position: relative;
                             display: inline-block;
                             font-family: 'Nanum Gothic', sans-serif;
-                            font-size: 3.5rem;
+                            font-size: 1.8rem;
                             letter-spacing: 5px;
                             color: white;
                             text-decoration: none;
                             overflow: hidden;
-                            
-                            &::after{
+
+                            &::after {
                                 content: '';
                                 position: absolute;
                                 display: inline-block;
@@ -88,16 +93,234 @@
                                 transition: all 0.5s;
                             }
 
-                            &:hover::after{
+                            &:hover::after {
                                 transform: translateX(0);
                             }
                         }
 
-                        
+
                     }
-            
-            
+
+
+                }
+            }
         }
     }
 }
+
+@media screen and (min-width:768px) and (max-width:1024px) {
+    .video_box {
+
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: auto;
+        height: auto;
+        z-index: -1;
+        filter: brightness(0.7);
+        transform: scale(9);
+
+    }
+
+
+
+    .eyecatchtext_box {
+
+        position: absolute;
+        top: 10%;
+
+        h1 {
+            color: white;
+            font-family: 'Noto Serif JP', sans-serif;
+            font-weight: 100;
+            font-size: 3.6rem;
+            letter-spacing: 10px;
+            line-height: 100px;
+        }
+
+        h3 {
+            color: white;
+            font-family: 'Noto Serif JP', sans-serif;
+            font-weight: 100;
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+
+        }
+
+        h2 {
+            color: white;
+            font-family: 'Noto Serif JP', sans-serif;
+            font-weight: 100;
+            font-size: 2rem;
+            letter-spacing: 5px;
+            margin-top: 50px;
+        }
+    }
+
+    .header_box {
+
+        position: absolute;
+        z-index: 1;
+        right: 0;
+        bottom: 5%;
+
+
+        header {
+
+            nav {
+
+                ul {
+                    padding-inline-start: 0px;
+
+                    li {
+                        position: relative;
+                        margin: 15px 0;
+                        list-style: none;
+
+
+                        a {
+                            position: relative;
+                            display: inline-block;
+                            font-family: 'Nanum Gothic', sans-serif;
+                            font-size: 2.5rem;
+                            letter-spacing: 5px;
+                            color: white;
+                            text-decoration: none;
+                            overflow: hidden;
+
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                display: inline-block;
+                                width: 100%;
+                                height: 1px;
+                                bottom: 0;
+                                left: 0;
+                                background-color: white;
+                                transform: translateX(-100%);
+                                transition: all 0.5s;
+                            }
+
+                            &:hover::after {
+                                transform: translateX(0);
+                            }
+                        }
+
+
+                    }
+
+
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width:1025px) {
+
+    .video_box {
+
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
+        filter: brightness(0.7);
+
+    }
+
+
+
+    .eyecatchtext_box {
+
+        position: absolute;
+        top: 25%;
+
+        h1 {
+            color: white;
+            font-family: 'Noto Serif JP', sans-serif;
+            font-weight: 100;
+            font-size: 6rem;
+            letter-spacing: 10px;
+        }
+
+        h3 {
+            color: white;
+            font-family: 'Noto Serif JP', sans-serif;
+            font-weight: 100;
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+
+        }
+
+        h2 {
+            color: white;
+            font-family: 'Noto Serif JP', sans-serif;
+            font-weight: 100;
+            font-size: 2rem;
+            letter-spacing: 5px;
+            margin-top: 175px;
+        }
+    }
+
+    .header_box {
+
+        position: absolute;
+        z-index: 1;
+        right: 0;
+        bottom: 5%;
+
+
+        header {
+
+            nav {
+
+                ul {
+                    padding-inline-start: 0px;
+
+                    li {
+                        position: relative;
+                        margin: 15px 0;
+                        list-style: none;
+
+
+                        a {
+                            position: relative;
+                            display: inline-block;
+                            font-family: 'Nanum Gothic', sans-serif;
+                            font-size: 3.5rem;
+                            letter-spacing: 5px;
+                            color: white;
+                            text-decoration: none;
+                            overflow: hidden;
+
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                display: inline-block;
+                                width: 100%;
+                                height: 1px;
+                                bottom: 0;
+                                left: 0;
+                                background-color: white;
+                                transform: translateX(-100%);
+                                transition: all 0.5s;
+                            }
+
+                            &:hover::after {
+                                transform: translateX(0);
+                            }
+                        }
+
+
+                    }
+
+
+                }
+            }
+        }
+    }
+
 }

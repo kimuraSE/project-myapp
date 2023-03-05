@@ -1,9 +1,10 @@
-import { ChangeEvent, FormEvent,  useState, VideoHTMLAttributes } from "react"
+import { ChangeEvent, FormEvent, useState, VideoHTMLAttributes } from "react"
 import styles from "../styles/contact.module.scss"
 import MenuCp from "./cp/_menu"
 import PageTitleCp from "./cp/_pageTitle"
 import Image from "next/image";
 import twitter_icon from "../public/icon/twittericon.png"
+import Head from "next/head";
 
 const videoProps = {
     children: <source src='/video/home.mp4' type='video/mp4' />,
@@ -38,23 +39,23 @@ const ContactPage = () => {
         setOthers(e.target.value)
     }
 
-    const onClickSend = async(e: FormEvent<HTMLFormElement>) => {
+    const onClickSend = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault()
 
-        if(select.trim() === "" ){
+        if (select.trim() === "") {
 
             alert("お問い合わせ内容を入力してください")
 
             return
         }
 
-        if(name.trim() === "" ){
+        if (name.trim() === "") {
 
             alert("お名前を入力してください")
 
             return
         }
-        if(email.trim() === "" ){
+        if (email.trim() === "") {
 
             alert("メールアドレスを入力してください")
 
@@ -63,33 +64,39 @@ const ContactPage = () => {
 
 
         let data = {
-            select : select,
-            company : company,
-            name : name,
-            email : email,
-            others : others
+            select: select,
+            company: company,
+            name: name,
+            email: email,
+            others: others
         }
 
-        await fetch("api/contact",{
-            method : "POST",
-            headers:{
-                Accept : "application/json, text/plain",
-                "Content-Type" : "application/json",
+        await fetch("api/contact", {
+            method: "POST",
+            headers: {
+                Accept: "application/json, text/plain",
+                "Content-Type": "application/json",
             },
-            body : JSON.stringify(data),
-        }).then((res)=>{
-            if(res.status === 200) alert("送信完了")
+            body: JSON.stringify(data),
+        }).then((res) => {
+            if (res.status === 200) alert("送信完了")
         })
 
-        };
+    };
 
 
 
-       
-    
+
+
 
     return (
         <>
+
+            <Head>
+                <title>Kimura Ryotaのportfolio | contact</title>
+                <meta name="description" content="kimura ryotaのportfolioのcontact項目です" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+            </Head>
             <div className="global_container">
 
                 <div className={styles.video_box}>
@@ -100,7 +107,7 @@ const ContactPage = () => {
 
                 <div className="normal_container">
 
-                <MenuCp />
+                    <MenuCp />
 
                     <main>
 

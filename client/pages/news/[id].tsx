@@ -6,6 +6,7 @@ import PageTitleCp from "../cp/_pageTitle"
 import {BlogServiceClient} from "../../pb/BlogServiceClientPb"
 import {DetailesRequest} from "../../pb/blog_pb"
 import { useRouter } from "next/router"
+import Head from "next/head"
 
 const client = new BlogServiceClient("http://localhost:9000",null,null) 
 
@@ -50,6 +51,11 @@ const NewsIdPage = ({numericId}:Props) => {
 
     return (
         <>
+        <Head>
+        <title>Kimura Ryotaのportfolio | news | blog</title>
+                <meta name="description" content="ブログ記事です" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+        </Head>
             <div className="global_container">
 
                 <div className={styles.video_box}>
