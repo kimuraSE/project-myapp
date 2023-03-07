@@ -9,7 +9,7 @@ import { ChangeEvent, MouseEvent, useState } from "react"
 import { GetServerSideProps } from "next"
 import Head from "next/head"
 
-const client = new BlogServiceClient("http://localhost:9000",null,null)
+const client = new BlogServiceClient("http://localhost:8080",null,null)
 
 
 type Props ={

@@ -6,9 +6,10 @@ services:
     build: 
       context: ./server
     ports:
-      - "50051:50051"
+      - "9000:9000"
     links:
       - "mariadb"
+    container_name: "server"
 
   client:
     build: 
@@ -16,25 +17,24 @@ services:
     ports:
       - "3000:3000"
     tty: true
-    volumes:
-      - ./client:/app
     links:
       - "envoy"
+    container_name: "nextjs"
        
   envoy:
     build:
       context: ./proxy
     ports:
-      - "9000:9000"
+      - "8080:8080"
     links:
       - "server"
+    container_name: "envoy"
   
   mariadb:
     build: 
       context: ./mariadb
-    volumes:
-      - ./mariadb/data:/var/lib/mysql
     ports:
       - "3306:3306"
+    container_name: "mariadb"
     
     

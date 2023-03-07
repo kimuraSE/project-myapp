@@ -20,7 +20,7 @@ const NewsPage = () => {
     const [blogLists,setblogLists]= useState<Blog[]>([])
 
     useEffect(() => {
-        const client = new BlogServiceClient("http://localhost:9000",null,null)
+        const client = new BlogServiceClient("http://localhost:8080",null,null)
         const request = new ListBlogsRequest()
     
         client.listBlogs(request,{},(err,response)=>{

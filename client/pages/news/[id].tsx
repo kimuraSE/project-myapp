@@ -8,7 +8,7 @@ import {DetailesRequest} from "../../pb/blog_pb"
 import { useRouter } from "next/router"
 import Head from "next/head"
 
-const client = new BlogServiceClient("http://localhost:9000",null,null) 
+const client = new BlogServiceClient("http://localhost:8080",null,null) 
 
 
 const videoProps = {
