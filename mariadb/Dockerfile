@@ -1,4 +1,4 @@
-FROM mariadb:10.10
+FROM mariadb:latest
 
 RUN apt-get update -y
 
@@ -11,3 +11,4 @@ ENV MYSQL_PASSWORD=docker
 ENV TZ=Asia/Tokyo
 
 EXPOSE 3306
+CMD ["mysqld"]
