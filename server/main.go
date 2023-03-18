@@ -23,7 +23,7 @@ type server struct{
 
 
 func (*server) CreateMethod(ctx context.Context, in *pb.CreateRequest) (*pb.CreateResponse, error) {
-	db,err := sql.Open("mysql","docker:docker@tcp(mariadb:3306)/grpc-db")
+	db,err := sql.Open("mysql","docker:docker@tcp(127.0.0.1:3306)/grpc-db")
 
 	if err != nil{
 		return nil, status.Errorf(codes.Unavailable, "failed to connect to database: %v", err)
@@ -44,7 +44,7 @@ func (*server) CreateMethod(ctx context.Context, in *pb.CreateRequest) (*pb.Crea
 
 func(*server)LoginMethod(ctx context.Context,in *pb.LoginRequest) (*pb.LoginResponse, error){
 
-	db,err := sql.Open("mysql","docker:docker@tcp(mariadb:3306)/grpc-db")
+	db,err := sql.Open("mysql","docker:docker@tcp(127.0.0.1:3306)/grpc-db")
 	if err != nil{
 		return nil, status.Errorf(codes.Unavailable, "failed to connect to database: %v", err)
 	}
@@ -68,7 +68,7 @@ func(*server)LoginMethod(ctx context.Context,in *pb.LoginRequest) (*pb.LoginResp
 
 func (*server) ListBlogs(ctx context.Context, in *pb.ListBlogsRequest) (*pb.ListBlogsResponse, error) {
 
-	db,err := sql.Open("mysql","docker:docker@tcp(mariadb:3306)/grpc-db")
+	db,err := sql.Open("mysql","docker:docker@tcp(127.0.0.1:3306)/grpc-db")
     if err != nil {
         log.Fatalf("failed to connect to database: %v", err)
     }
@@ -106,7 +106,7 @@ func (*server) ListBlogs(ctx context.Context, in *pb.ListBlogsRequest) (*pb.List
 
 func(*server)DeleteBlog(ctx context.Context, in *pb.DeleteBlogRequest) (*pb.DeleteBlogResponse, error){
 
-	db,err := sql.Open("mysql","docker:docker@tcp(mariadb:3306)/grpc-db")
+	db,err := sql.Open("mysql","docker:docker@tcp(127.0.0.1:3306)/grpc-db")
 
 	if err != nil{
 		return nil, status.Errorf(codes.Unavailable, "failed to connect to database: %v", err)
@@ -130,7 +130,7 @@ func(*server)DeleteBlog(ctx context.Context, in *pb.DeleteBlogRequest) (*pb.Dele
 
 func (*server)ReadDetails(ctx context.Context, in *pb.DetailesRequest) (*pb.DetailesResponse, error){
 
-	db,err := sql.Open("mysql","docker:docker@tcp(mariadb:3306)/grpc-db")
+	db,err := sql.Open("mysql","docker:docker@tcp(127.0.0.1:3306)/grpc-db")
 	if err != nil{
 		return nil, status.Errorf(codes.Unavailable, "failed to connect to database: %v", err)
 	}
@@ -152,7 +152,7 @@ func (*server)ReadDetails(ctx context.Context, in *pb.DetailesRequest) (*pb.Deta
 }
 
 func main(){
-	lis,err := net.Listen("tcp",":9000")
+	lis,err := net.Listen("tcp","0.0.0.0:50051")
 	if err != nil{
 		log.Fatalf("failed to listen: %v",err)
 	}

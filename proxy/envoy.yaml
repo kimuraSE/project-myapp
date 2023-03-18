@@ -20,9 +20,14 @@ static_resources:
               - "*"
               routes:
               - match:
-                  prefix: "/" 
+                  prefix: "/blog.BlogService"
                 route:
                   cluster: grpc_cluster
+                  timeout: 5s
+              - match:
+                  prefix: "/" 
+                route:
+                  cluster: nextjs_cluster
                   timeout: 5s
               cors:
                 allow_origin_string_match:
@@ -53,5 +58,23 @@ static_resources:
         - endpoint:
             address:
               socket_address:
-                address: server
-                port_value: 9000
+                address: 127.0.0.1
+                port_value: 50051
+
+  - name: nextjs_cluster
+    connect_timeout: 0.25s
+    type: logical_dns
+    dns_lookup_family: V4_ONLY
+    lb_policy: round_robin
+    upstream_connection_options:
+        tcp_keepalive:
+          keepalive_time: 300
+    load_assignment:
+      cluster_name: nextjs_cluster
+      endpoints:
+      - lb_endpoints:
+        - endpoint:
+            address:
+              socket_address:
+                address: 127.0.0.1
+                port_value: 3000

@@ -27,7 +27,7 @@ const BashTop = ({user_name,user_pwd}:Props) =>{
 
 
     useEffect(() => {
-    const client = new BlogServiceClient("http://localhost:8080",null,null)
+        const client = new BlogServiceClient("https://kimuraryotaportfolio.link",null,null)
     const request = new ListBlogsRequest()
 
     client.listBlogs(request,{},(err,response)=>{

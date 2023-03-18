@@ -5,7 +5,7 @@ import { LoginRequest } from "../../../pb/blog_pb"
 import {setCookie} from "nookies"
 import Head from "next/head"
 
-const client = new BlogServiceClient("http://localhost:8080",null,null) 
+const client = new BlogServiceClient("https://kimuraryotaportfolio.link",null,null)
 
 const Login = ()=>{
 
