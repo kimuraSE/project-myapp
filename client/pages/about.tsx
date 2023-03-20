@@ -3,7 +3,7 @@ import styles from "/styles/about.module.scss"
 import MenuCp from "./cp/_menu"
 import PageTitleCp from "./cp/_pageTitle"
 import Head from "next/head"
-import img1 from "../public/img/about/Service.png"
+import img1 from "../public/img/about/myapp-cluster.png"
 import img2 from "../public/img/about/future.jpg"
 import img3 from "../public/img/about/kimura.jpg"
 
@@ -103,8 +103,8 @@ const AboutPage =()=>{
                     <span>
                         フロントエンド : HTML,CSS(Sass),javascript(Typescript)<p></p>
                         バックエンド : Go言語<p></p>
-                        フレームワーク : Next.js<p></p>
-                        インフラ技術 : AWS,Docker,マイクロサービス開発<p></p>
+                        フレームワーク : Next.js,Gin<p></p>
+                        インフラ技術 : AWS,Docker,gRPC<p></p>
                         ソフトウェア : AdobeXD.Photoshop,Illustrator<p></p>
                         ...以上が私が用いる技術になります。<p></p>
                         HP制作ではGoogleでの検索順位が上位に入りやすくなるSPA(シングルページアプリケーション)技術を

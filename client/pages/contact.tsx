@@ -71,7 +71,7 @@ const ContactPage = () => {
             others: others
         }
 
-        await fetch("api/contact", {
+        await fetch("https://kimuraryotaportfolio.link/api/contact", {
             method: "POST",
             headers: {
                 Accept: "application/json, text/plain",
@@ -79,7 +79,13 @@ const ContactPage = () => {
             },
             body: JSON.stringify(data),
         }).then((res) => {
-            if (res.status === 200) alert("送信完了")
+            if (res.status === 200) {
+                setName("")
+                setCompany("")
+                setEmail("")
+                setOthers("")
+                alert("送信完了")
+            }
         })
 
     };

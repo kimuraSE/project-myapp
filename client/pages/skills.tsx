@@ -3,7 +3,7 @@ import { VideoHTMLAttributes } from "react";
 import MenuCp from "./cp/_menu";
 import PageTitleCp from "./cp/_pageTitle";
 import styles from "/styles/skills.module.scss"
-import img1 from  "../public/img/about/Service.png"
+import img1 from  "../public/img/about/myapp-cluster.png"
 import img2 from  "../public/img/skills/micro-img.jpg"
 import img3 from  "../public/img/skills/HTML.png"
 import Image from "next/image";
@@ -59,8 +59,8 @@ const skillsPage = () => {
 
                                                 フロントエンド : HTML,CSS(Sass),javascript(Typescript)<p></p>
                                                 バックエンド : Go言語<p></p>
-                                                フレームワーク : Next.js<p></p>
-                                                インフラ技術 : AWS,Docker,マイクロサービス開発<p></p>
+                                                フレームワーク : Next.js,Gin<p></p>
+                                                インフラ技術 : AWS,Docker,gRPC<p></p>
                                                 ソフトウェア : AdobeXD.Photoshop,Illustrator<p></p>
                                                 フロントエンドではNext.jsを使用してWebサイトのSPA(シングルページアプリケーション)化をし、<p></p>
                                                 Googleでの検索順位を上位にするSEO対策を施しています。<p></p>

@@ -24,15 +24,13 @@ export default function Home() {
         <meta property="og:title" content="kimura ryotaのportfolio" />
         <meta property="og:description" content="kimura ryotaのportfolioのTopページ項目です。どういった技術を使っているのか？など公開しております。みなさんに私の人物像が伝わって頂けたら幸いです。" />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://kimuraportfolio.link" />
-        <meta property="og:image" content="https://kimuraportfolio.link/icon/page_img.jpg" />
+        <meta property="og:url" content="https://kimuraryotaportfolio.link" />
+        <meta property="og:image" content="https://kimuraryotaportfolio.link/icon/page-img.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="628" />
         <meta property="og:site_name" content="kimuraryotaのportfolio" />
-        <meta property="og:locale" content="ja_JP" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@Webweb1K" />
-        <meta name="twitter:title" content="kimura ryotaのportfolio" />
-        <meta name="twitter:description" content="kimura ryotaのportfolioのTopページ項目です。どういった技術を使っているのか？など公開しております。みなさんに私の人物像が伝わって頂けたら幸いです。" />
-        <meta name="twitter:image" content="https://kimuraportfolio.link/icon/page_img.jpg" />
       </Head>
 
       <div className="global_container">
