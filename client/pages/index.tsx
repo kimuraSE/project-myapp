@@ -31,7 +31,9 @@ export default function Home() {
         <meta property="og:site_name" content="kimuraryotaのportfolio" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@Webweb1K" />
+        <meta name="google-site-verification" content="2v4eVlO1VtVz28w70_82iTE-RKaPf_khbUe46hJ19ok" />
       </Head>
+                
 
       <div className="global_container">
 
