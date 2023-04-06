@@ -2,14 +2,6 @@ version: '3'
 
 services:
 
-  nginx:
-    build: 
-      context: ./nginx
-    ports:
-      - "80:80"
-    depends_on:
-      - client
-
    
 
   server:
@@ -20,14 +12,15 @@ services:
     depends_on:
       - mariadb
     
+    
 
   client:
     build: 
       context: ./client
+    volumes:
+      - ./client:/app
     ports:
       - "3000:3000"
-    depends_on:
-      - envoy
  
        
   envoy:
@@ -37,6 +30,7 @@ services:
       - "8080:8080"
     depends_on:
       - "server"
+      - "client"
    
   
   mariadb:
